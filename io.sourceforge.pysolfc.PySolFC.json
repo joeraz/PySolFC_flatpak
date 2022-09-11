@@ -32,16 +32,38 @@
     {
       "name": "PySolFC-Cardsets",
       "buildsystem": "simple",
-      "build-commands": [],
+      "build-commands": [
+        "mkdir -p /app/share/PySolFC/cardsets/",
+        "cp -r * /app/share/PySolFC/cardsets/"
+      ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://sourceforge.net/projects/pysolfc/files/PySolFC-Cardsets/PySolFC-Cardsets-2.1/PySolFC-Cardsets-2.1.tar.bz2",
-          "sha256": "0fc819d28e2b14b84ff4f86b6983557d3e2b4353e19815724e4daeded3463774",
+          "type": "git",
+          "url": "https://github.com/shlomif/PySolFC-Cardsets",
+          "commit": "db74d748556b167052da9d6bcd7cc6b461351ff8",
+          "tag": "2.1",
           "x-checker-data": {
-            "type": "html",
-            "url": "https://sourceforge.net/projects/pysolfc/rss",
-            "pattern": "<link>(https://sourceforge.net/.+/PySolFC-Cardsets-([\\d\\.]+\\d).tar.bz2)/download"
+            "type": "git",
+            "tag-pattern": "^([\\d.]+)$"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PySol-Music",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm644 data/music/* -t /app/share/PySolFC/music/"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/shlomif/pysol-music",
+          "commit": "108d6dcbb931f2b709f5a1590ea7ea6190f98d9e",
+          "tag": "4.50",
+          "x-checker-data": {
+              "type": "git",
+              "tag-pattern": "^([\\d.]+)$"
           }
         }
       ]
