@@ -51,6 +51,7 @@
       "buildsystem": "simple",
       "build-commands": [
         "make rules",
+        "make mo",
         "ln -s data/images images",
         "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation"
       ],
