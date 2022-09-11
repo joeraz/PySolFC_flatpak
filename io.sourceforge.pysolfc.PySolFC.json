@@ -5,10 +5,12 @@
   "sdk": "org.freedesktop.Sdk",
   "command": "python pysol.py",
   "cleanup": [
+    "/bin/sqlite3_analyzer",
     "/include",
     "*.a",
     "*.la",
     "/lib/pkgconfig",
+    "/man",
     "/share/aclocal",
     "/share/info",
     "/share/man"
