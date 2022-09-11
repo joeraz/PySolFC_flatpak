@@ -1,0 +1,112 @@
+{
+  "app-id": "io.sourceforge.pysolfc.PySolFC",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "22.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "python pysol.py",
+  "cleanup": [
+    "/include",
+    "*.a",
+    "*.la",
+    "/lib/pkgconfig",
+    "/share/aclocal",
+    "/share/info",
+    "/share/man"
+  ],
+  "finish-args": [
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio",
+    "--device=dri"
+  ],
+  "modules": [
+    {
+      "name": "tkinter",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --prefix=${FLATPAK_DEST} ."
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/iwalton3/tkinter-standalone",
+          "commit": "d9cb97c5bd4f814c73678366e0e48220776b6ad3"
+        }
+      ],
+      "modules": [
+        {
+          "name": "tcl8.6",
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.12-src.tar.gz",
+              "sha256": "26c995dd0f167e48b11961d891ee555f680c175f7173ff8cb829f4ebcde4c1a6"
+            }
+          ],
+          "subdir": "unix",
+          "post-install": [
+            "chmod +w ${FLATPAK_DEST}/lib/libtcl8.6.so"
+          ]
+        },
+        {
+          "name": "tk8.6",
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://prdownloads.sourceforge.net/tcl/tk8.6.12-src.tar.gz",
+              "sha256": "12395c1f3fcb6bed2938689f797ea3cdf41ed5cb6c4766eec8ac949560310630"
+            }
+          ],
+          "subdir": "unix",
+          "post-install": [
+            "chmod +w ${FLATPAK_DEST}/lib/libtk8.6.so"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "python3-ttkthemes",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ttkthemes\" --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/fa/45/ab8ada55281af99a03bc0f8be53a502eb37ee34b94819a9ced89e8b0c12f/ttkthemes-3.2.2.tar.gz",
+          "sha256": "01daed001f2ff0e4f32832a0d9ea48176c0c505203b030756bdde3bd1bcb21d2",
+          "x-checker-data": {
+            "type": "pypi",
+            "name": "ttkthemes"
+          }
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
+          "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04",
+          "x-checker-data": {
+            "type": "pypi",
+            "name": "Pillow"
+          }
+        }
+      ]
+    },
+    {
+      "name": "PySolFC-Cardsets",
+      "buildsystem": "simple",
+      "build-commands": [],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://sourceforge.net/projects/pysolfc/files/PySolFC-Cardsets/PySolFC-Cardsets-2.1/PySolFC-Cardsets-2.1.tar.bz2",
+          "sha256": "0fc819d28e2b14b84ff4f86b6983557d3e2b4353e19815724e4daeded3463774",
+          "x-checker-data": {
+            "type": "html",
+            "url": "https://sourceforge.net/projects/pysolfc/rss",
+            "pattern": "<link>(https://sourceforge.net/.+/PySolFC-Cardsets-([\\d\\.]+\\d).tar.bz2)/download"
+          }
+        }
+      ]
+    }
+  ]
+}
