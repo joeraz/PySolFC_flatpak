@@ -1,0 +1,10 @@
+--- a/pysollib/settings.py	2022-09-12 14:33:45.598280052 -0400
++++ b/pysollib/settings.py	2022-09-12 14:35:02.425301950 -0400
+@@ -61,6 +61,7 @@
+ # you can add your extra directories here
+ if os.name == 'posix':
+     DATA_DIRS = [
++        '/app/share/PySolFC',
+         '/usr/share/PySolFC',
+         '/usr/local/share/PySolFC',
+         '/usr/share/games/PySolFC',

@@ -91,6 +91,10 @@
           }
         },
         {
+          "type": "patch",
+          "path": "0001-allow-app-paths.patch"
+        },
+        {
           "type": "file",
           "path": "io.sourceforge.pysolfc.PySolFC.appdata.xml"
         }
