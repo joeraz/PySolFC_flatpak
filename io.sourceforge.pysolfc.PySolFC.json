@@ -26,8 +26,30 @@
     "--socket=pulseaudio",
     "--device=dri"
   ],
+  "build-options": {
+      "env": {
+          "PORTMIDI_INC_PORTTIME": "1",
+          "PYGAME_EXTRA_BASE": "/app"
+      }
+  },
   "modules": [
     "tkinter.json",
+    {
+        "name": "portmidi",
+        "buildsystem": "cmake",
+        "sources": [
+            {
+              "type": "git",
+              "url": "https://github.com/PortMidi/portmidi",
+              "commit": "6a97d1eb3af062f3b2f2fabc196a5f66efb7a6c5",
+              "tag": "v2.0.3",
+              "x-checker-data": {
+                "type": "git",
+                "tag-pattern": "^v([\\d.]+)$"
+              }
+            }
+        ]
+    },
     "python3-modules.json",
     {
       "name": "PySolFC-Cardsets",
