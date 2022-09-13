@@ -8,7 +8,7 @@
   <summary>Solitaire game compilation</summary>
   <description>
     <p>A collection of more than 1000 Solitaire games, using various deck types
-      including international standard, hex-a-deck, and hanafuda.</p>
+      including international standard, hex-a-deck, mahjongg, and hanafuda.</p>
   </description>
   <launchable type="desktop-id">pysol.desktop</launchable>
   <categories>
