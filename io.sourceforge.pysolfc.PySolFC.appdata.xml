@@ -2,7 +2,7 @@
 <!-- Copyright 2022 Stephan Sokolow -->
 <component type="desktop-application">
   <id>io.sourceforge.pysolfc.PySolFC</id>
-  <metadata_license>MIT</metadata_license>
+  <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>PySolFC</name>
   <summary>Solitaire game compilation</summary>
@@ -62,11 +62,103 @@
     <control>keyboard</control>
   </supports>
   <releases>
-    <release version="2.16.0" date="2022-05-10"/>
-    <release version="2.15.0" date="2022-03-12" type="development"/>
-    <release version="2.14.1" date="2021-12-10"/>
-    <release version="2.14.0" date="2021-09-19"/>
-    <release version="2.12.0" date="2021-07-11"/>
+    <release version="2.16.0" date="2022-05-10">
+      <description>
+        <p>Anyone upgrading from a version prior to 2.15.0 should read the notes for that version before upgrading. New in this release:</p>
+        <ul>
+          <li>Enhancements to many images and graphical displays.</li>
+          <li>More game rules in the documentation.</li>
+          <li>Bugfixes, cleanup, and other enhancements.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.15.0" date="2022-03-12" type="development">
+      <description>
+        <p>
+          This is a pretty sizable release, so this beta version is being
+          offered before a stable 2.16 in the next month or two. Any feedback
+          and bug reports are greatly appreciated. The full list of changes for
+          this release is quite long, but here are the highlights:
+        </p>
+        <ul>
+          <li>
+            There is a new Cardsets release - PySolFC-Cardsets v.2.1 (required
+            to run 2.15).
+          </li>
+          <li>
+            35 new games, plus enhancements and fixes to many existing games.
+          </li>
+          <li>
+              New high resolution default display. This new display uses high
+              resolution cardsets and scaling to make the games look impressive
+              on larger monitors, but will still scale for smaller displays
+              too.
+            </li>
+          <li>
+              Note that the new high-resolution options will not override your
+              currently selected options for existing users. If you want to use
+              the new settings, you can delete or rename your options.cfg file.
+            </li>
+          <li>
+              New feature to search for games, cardsets, and table tiles by
+              name.
+            </li>
+          <li>Many new display options.</li>
+          <li>Many missing game rules added to the documentation.</li>
+          <li>Bugfixes and cleanup.</li>
+          <li>And more.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.14.1" date="2021-12-10">
+      <p>
+        This release fixes a number of bugs, including one that causes crashes
+        for some users when opening the select game/cardset/table tile window.
+      </p>
+    </release>
+    <release version="2.14.0" date="2021-09-19">
+      <description>
+        <ul>
+          <li>16 new games</li>
+          <li>
+              Support for Python 3.10 (Minimum requirement is still Python 2.7)
+            </li>
+          <li>A new macOS package.</li>
+          <li>
+              Enhancements to the tree select dialogs for selecting games,
+              cardsets, and table tiles.
+            </li>
+          <li>Further additions/improvements to the documentation.</li>
+          <li>Many bugfixes and cleanups.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.12.0" date="2021-07-11">
+      <description>
+        <ul>
+          <li>40 new games!</li>
+          <li>
+              Support for using higher resolution cardsets. The high resolution
+              "Neo" cardset has been added to the Windows Installer package and
+              is available in a preview release of PySolFC-Cardsets 2.1
+            </li>
+          <li>Improved organization and categorization of the games list.</li>
+          <li>
+              New display options - added option to center the game layout in
+              the window.
+            </li>
+          <li>
+              New audio options - can now disable music without disabling sound
+              effects.
+            </li>
+          <li>
+              Improved documentation - added rules to a large number of games
+              that were missing them.
+            </li>
+          <li>Bugfixes and cleanup.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.10.0" date="2020-06-22"/>
     <release version="2.8.0" date="2020-03-05"/>
     <release version="2.6.2" date="2019-03-04"/>
