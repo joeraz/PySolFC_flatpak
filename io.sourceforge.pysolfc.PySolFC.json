@@ -9,7 +9,7 @@
     "/bin/tclsh8.6",
     "/bin/wish8.6",
     "/include",
-    "*.a",
+    "libt*stub*.a",
     "*.la",
     "/lib/*Config.sh",
     "/lib/pkgconfig",
@@ -34,22 +34,7 @@
   },
   "modules": [
     "tkinter.json",
-    {
-        "name": "portmidi",
-        "buildsystem": "cmake",
-        "sources": [
-            {
-              "type": "git",
-              "url": "https://github.com/PortMidi/portmidi",
-              "commit": "6a97d1eb3af062f3b2f2fabc196a5f66efb7a6c5",
-              "tag": "v2.0.3",
-              "x-checker-data": {
-                "type": "git",
-                "tag-pattern": "^v([\\d.]+)$"
-              }
-            }
-        ]
-    },
+    "pygame2_extra_deps.json",
     "python3-modules.json",
     {
       "name": "PySolFC-Cardsets",
