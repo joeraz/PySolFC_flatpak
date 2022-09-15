@@ -26,16 +26,28 @@
   <!-- TODO:
   <screenshots>
     <screenshot type="default">
-      <image>URL HERE</image>
+      <image>1.png URL HERE</image>
+      <caption>Klondike with default theme</caption>
     </screenshot>
     <screenshot>
-      <image>URL HERE</image>
+      <image>2.png URL HERE</image>
+      <caption>Clock, Neo cards, Fractal Blue table, custom backs</caption>
     </screenshot>
     <screenshot>
-      <image>URL HERE</image>
+      <image>3.png URL HERE</image>
+      <caption>Bits n Bytes, Neo Hex cards, Felt Green table, custom backs</caption>
     </screenshot>
     <screenshot>
-      <image>URL HERE</image>
+      <image>4.png URL HERE</image>
+      <caption>Firecracker, Louie Mantia Hanafuda cards, Mountains table</caption>
+    </screenshot>
+    <screenshot>
+      <image>5.png URL HERE</image>
+      <caption>Mahjongg Taipei, Uni Mahjongg Tiles, Wood table</caption>
+    </screenshot>
+    <screenshot>
+      <image>6.png URL HERE</image>
+      <caption>Shisen-Sho 24x12, KMahjongg tileset, Nostalgy table</caption>
     </screenshot>
   </screenshots>
   -->
