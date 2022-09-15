@@ -5,7 +5,7 @@ An almost-ready Flatpak packaging setup for
 
 ## Main Blockers
 
-1. Figure out how to get PyGame to look in `/app/lib` for `libmikmod.a` so music
+1. Figure out how to get PyGame to look in `/app/lib` for `libmodplug.a` so music
    playback doesn't get disabled.
 2. Upload the screenshots to their final location and add them to
    `io.sourceforge.pysolfc.PySolFC.appdata.xml`. (Use
