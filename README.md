@@ -5,16 +5,14 @@ An almost-ready Flatpak packaging setup for
 
 ## Main Blockers
 
-1. Figure out how to get PyGame to look in `/app/lib` for `libmodplug.a` so music
-   playback doesn't get disabled.
-2. Upload the screenshots to their final location and add them to
-   `io.sourceforge.pysolfc.PySolFC.appdata.xml`. (Use
-   `flatpak run org.freedesktop.appstream-glib validate io.sourceforge.pysolfc.PySolFC.appdata.xml`
-   after doing so)
-3. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
+1. Figure out why my build of SDL2_mixer thinks the `.so` file for libmodplug
+   should be named `libmodplug.a` and whether there's a more correct way to make
+   it look in the right place than just forcibly adding `/app/lib` to
+   `LD_LIBRARY_PATH` in the Flatpak finalization options or a wrapper.
+2. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
    [Black Hole Solitaire Solver](https://www.shlomifish.org/open-source/projects/black-hole-solitaire-solver/)
    to the build and test that they're being picked up correctly.
-4. Check
+3. Check
    [CONTRIBUTING.md](https://github.com/shlomif/PySolFC/blob/master/CONTRIBUTING.md)
    to see if there's anything else I need to do.
 
@@ -57,7 +55,7 @@ An almost-ready Flatpak packaging setup for
    package knows how to obey when a non-GNOME desktop sets
    `LD_PRELOAD=libgtk3-nocsd.so.0` to prevent a usability regression.)
 
-# How to Test Locally
+## How to Test Locally
 
 1. Make sure you have [Flathub set up](https://flatpak.org/setup/) with suitably
    new versions of `flatpak` and `flatpak-builder` installed. (The flathub
