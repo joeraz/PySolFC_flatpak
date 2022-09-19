@@ -3,16 +3,18 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "22.08",
   "sdk": "org.freedesktop.Sdk",
-  "command": "pysol.py",
+  "command": "pysol",
   "cleanup": [
     "/bin/sqlite3_analyzer",
     "/bin/tclsh8.6",
     "/bin/wish8.6",
     "/include",
-    "libt*stub*.a",
+    "*.a",
     "*.la",
     "/lib/*Config.sh",
+    "/lib/cmake",
     "/lib/pkgconfig",
+    "/lib64/pkgconfig",
     "/man",
     "/share/aclocal",
     "/share/info",
@@ -83,6 +85,7 @@
         "make mo",
         "ln -s data/images images",
         "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} . --no-build-isolation",
+        "install -Dm755 pysol -t /app/bin/",
         "install -Dm644 io.sourceforge.pysolfc.PySolFC.appdata.xml -t /app/share/metainfo/"
       ],
       "sources": [
@@ -104,6 +107,17 @@
         {
           "type": "file",
           "path": "io.sourceforge.pysolfc.PySolFC.appdata.xml"
+        },
+        {
+            "type": "script",
+            "commands": [
+                "# Workaround for 'flatpak run' not setting LD_LIBRARY_PATH=/app/lib",
+                "# and SDL_mixer needing that to find /app/lib/libmodplug.so*",
+                "",
+                "export LD_LIBRARY_PATH='/app/lib:$LD_LIBRARY_PATH'",
+                "pysol.py \"$@\""
+            ],
+            "dest-filename": "pysol"
         }
       ]
     }

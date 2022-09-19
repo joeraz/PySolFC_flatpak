@@ -6,6 +6,7 @@
     {
       "name": "libmodplug_sdl_vendored",
       "buildsystem": "cmake",
+      "config-opts": [ "-DBUILD_SHARED_LIBS=ON", "-DFOO=BAR" ],
       "sources": [
         {
           "type": "git",

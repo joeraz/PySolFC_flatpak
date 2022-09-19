@@ -5,14 +5,10 @@ An almost-ready Flatpak packaging setup for
 
 ## Main Blockers
 
-1. Figure out why my build of SDL2_mixer thinks the `.so` file for libmodplug
-   should be named `libmodplug.a` and whether there's a more correct way to make
-   it look in the right place than just forcibly adding `/app/lib` to
-   `LD_LIBRARY_PATH` in the Flatpak finalization options or a wrapper.
-2. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
+1. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
    [Black Hole Solitaire Solver](https://www.shlomifish.org/open-source/projects/black-hole-solitaire-solver/)
    to the build and test that they're being picked up correctly.
-3. Check
+2. Check
    [CONTRIBUTING.md](https://github.com/shlomif/PySolFC/blob/master/CONTRIBUTING.md)
    to see if there's anything else I need to do.
 
