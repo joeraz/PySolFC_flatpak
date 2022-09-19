@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2022 Stephan Sokolow -->
 <!-- Copyright 2021-2022 Joe R. (@joeraz) -->
+<!-- Copyright 2017-2021 Shlomi Fish -->
 <component type="desktop-application">
   <id>io.sourceforge.pysolfc.PySolFC</id>
   <metadata_license>FSFAP</metadata_license>
@@ -62,11 +63,13 @@
     <python3>pysol_cards</python3>
   </provides>
   <requires>
+    <!-- Meaning: Requires one of pointing, tablet, or touch -->
     <control>pointing</control>
     <control>tablet</control>
     <control>touch</control>
   </requires>
   <requires>
+    <!-- Meaning: Will never use Internet access even if offered -->
     <internet>offline-only</internet>
   </requires>
   <supports>
@@ -170,15 +173,119 @@
         </ul>
       </description>
     </release>
-    <release version="2.10.0" date="2020-06-22"/>
-    <release version="2.8.0" date="2020-03-05"/>
-    <release version="2.6.2" date="2019-03-04"/>
-    <release version="2.6.0" date="2019-02-14"/>
-    <release version="2.4.0" date="2018-06-23"/>
-    <release version="2.2.0" date="2018-04-16"/>
-    <release version="2.1.4" date="2018-03-31" type="development"/>
-    <release version="2.1.3" date="2018-03-05" type="development"/>
-    <release version="2.1.0" date="2017-11-19" type="development"/>
+    <release version="2.10.0" date="2020-06-22">
+      <description>
+        <ul>
+          <li>Fix moving cards in the Scorpion Tail game.</li>
+          <li>One can optionally load the Freecell Solver and the Black Hole
+            Solver using their DLLs (for better speed).</li>
+          <li>Test Windows Version in the installer</li>
+          <li>Pause when showing statistics</li>
+          <li>Some cleanups and refactoring.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.8.0" date="2020-03-05">
+      <description>
+        <ul>
+          <li>A new logo thanks to @ghostofiht.</li>
+          <li>Fix for freezes (pygame upgrade)</li>
+          <li>Fixed Three Peaks scoring</li>
+          <li>Compatibility with Pillow 6.x</li>
+          <li>Restore the "Save games geometry" feature</li>
+          <li>Added a NEWS.asciidoc file.</li>
+          <li>Better kivy/Android support</li>
+          <li>Using ttk and configobj as shipped in the python dist (instead of
+            forked versions)</li>
+          <li>Requiring <code>attrs</code> and <code>pysol-cards</code> from
+            PyPI</li>
+          <li>Added tests, bug fixes and refactorings.</li>
+          <li>Add the -g and --deal command line options.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.6.2" date="2019-03-04">
+      <description>
+        <ul>
+          <li>Fixes for the Windows and macOS packages.</li>
+          <li>Forbid illegal moves in Spider and some other variants.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.6.0" date="2019-02-14">
+      <description>
+        <ul>
+          <li>Support for solving Golf using a solver</li>
+          <li>An untested macOS package (we need testers)</li>
+          <li>A bug fix</li>
+          <li>Ability to run the test suite without python 2.x and/or
+            pygtk</li>
+          <li>Code cleanups.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.4.0" date="2018-06-23">
+      <description>
+        <ul>
+          <li>The Windows installer now includes the revitalised PySol-music
+            package. For more info, see shlomif/PySolFC#82.</li>
+          <li>Many improvements to the test suite and the board import
+            functionality.</li>
+          <li>Some bug fixes.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.2.0" date="2018-04-16">
+      <description>
+        <ul>
+          <li>The Microsoft Windows binary installer now contains and supports
+            the solver for Freecell and other games.</li>
+          <li>Many bug fixes.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.1.4" date="2018-03-31" type="development">
+      <description>
+        <ul>
+          <li>We now provide a Microsoft Windows binary installer again, thanks
+            to the great work of Roderik Ploszek. Note that the solvers (for
+            FreeCell/etc.) are not installed as part of it yet, but they are
+            available separately.</li>
+          <li><code>pysol-sound-server</code> was updated to support Python
+            3.x.</li>
+          <li>Fixes for the board export / solver input, and for redealing upon
+            restart of the "ms*" deals.</li>
+          <li>Various cleanups.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.1.3" date="2018-03-05" type="development">
+      <description>
+        <ul>
+          <li>Support for the kivy toolkit for running under Android-based
+            devices (currently python 2.7-only)</li>
+          <li>Fixed the help system and removed the need for the sgmllib
+            module.</li>
+          <li>Other fixes and cleanups.</li>
+          <li>Currently there is no Microsoft Windows binary package. Help or
+            insights will be appreciated.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.1.0" date="2017-11-19" type="development">
+      <description>
+        <ul>
+          <li>The code is now compatible with both Python 2.7.x and Python
+            3.x</li>
+          <li>One can deal all MS FreeCell/FC-pro deals by specifying e.g:
+            "ms100000" as the seed.</li>
+          <li>Support for Black Hole and All in a Row solver was added.</li>
+          <li>Test suite and CI were added to the repository.</li>
+          <li>The code now passes flake8 validation.</li>
+          <li>Some improvements to the solver dialog.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0" date="2009-12-04"/>
     <release version="1.1" date="2007-09-06"/>
     <release version="1.0" date="2007-02-21"/>

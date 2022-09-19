@@ -19,33 +19,22 @@ An almost-ready Flatpak packaging setup for
 2. Replace `0001-allow-app-paths.patch` with a proper upstream fix to have
    PyGame derive the install prefix from its location rather than hard-coding
    the list of places to look for assets.
-3. Identify which of the remaining PySolFC release announcements are copyright
-   @shlomif and integrate them into the Appstream XML under FSFAP terms, as I've
-   received permission to do.
-
-   > hi Stephan!
-   >
-   > All my changes to PySol FC [or similar copyleft/etc. codebases] are under
-   > CC0/MITL/etc.:
-   >
-   > <https://github.com/shlomif/shlomif-computer-settings/blob/master/shlomif-settings/git/commit-messages/cc0-copyright-disclaimer.txt>
-
-4. Contact skomoroh for permission to relicense the rest of the release
+3. Contact skomoroh for permission to relicense the rest of the release
    announcements for inclusion in the Appstream XML file.
-5. Clean up staleness in PySol's build instructions and deduplicate build
+4. Clean up staleness in PySol's build instructions and deduplicate build
    automation as noticed in
    [this comment](https://github.com/shlomif/PySolFC/issues/256#issuecomment-1242955493).
    (May want to setup some `Vagrantfile`s to automate spinning up the various
    distros and installing PySolFC to identify staleness in the dependency
    installation commands given in the README.)
-6. Convert `take_screenshot.py` from a proof of concept to a proper tool.
-7. Contribute a Flatpak theme package for the GTK+ 2.x version of Breeze to
+5. Convert `take_screenshot.py` from a proof of concept to a proper tool.
+6. Contribute a Flatpak theme package for the GTK+ 2.x version of Breeze to
    Flathub (it'd also benefit apps like
    [Geeqie](https://flathub.org/apps/details/org.geeqie.Geeqie)) and then try
    adding [gtkTtk](https://github.com/Geballin/gtkTtk) as PySolFC's default Ttk
    theme... possibly through
    [python-gttk](https://github.com/TkinterEP/python-gttk)
-8. Port the experimental GTK backend from PyGTK to PyGObject so there's an
+7. Port the experimental GTK backend from PyGTK to PyGObject so there's an
    avenue forward for native Wayland support. (Must also add
    [gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd) to the build so the Flatpak
    package knows how to obey when a non-GNOME desktop sets
