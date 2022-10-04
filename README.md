@@ -1,15 +1,9 @@
 # Flatpak Metadata for PySolFC (WIP)
 
-An almost-ready Flatpak packaging setup for
-[PySolFC](https://pysolfc.sourceforge.io/).
+A Flatpak packaging setup for [PySolFC](https://pysolfc.sourceforge.io/) that
+should be ready for submission.
 
-## Main Blockers
-
-1. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
-   [Black Hole Solitaire Solver](https://www.shlomifish.org/open-source/projects/black-hole-solitaire-solver/)
-   to the build and test that they're being picked up correctly.
-
-## Nice to Have
+## Additional "Nice to Have" Ideas
 
 1. Check if Tkinter requires any of the `.tcl` files in `/lib` or if we can add
    them to `cleanup` to reduce the package size.

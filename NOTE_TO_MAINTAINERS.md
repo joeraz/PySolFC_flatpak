@@ -14,10 +14,24 @@ Regarding `io.sourceforge.pysolfc.PySolFC.json`:
    [flatpak-pip-generator](https://github.com/flatpak/flatpak-builder-tools/blob/master/pip/flatpak-pip-generator)
    script as
    `python3 flatpak-pip-generator --checker-data attrs configobj pillow pycotap 'pygame>=2' ttkthemes pysol-cards`
-3. There's no version field because Flathub assumes the newest version listed in
+3. `solvers_extra_deps.json` was produced by running the
+   [flatpak-cpan-generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/cpan)
+   script as
+   `./flatpak-cpan-generator.pl -d solvers_extra_deps -o solvers_extra_deps.json Moo Path::Tiny Template`.
+
+   Note that, unlike `flatpak-pip-generator`, this produces a bare sources list,
+   not a complete module section, and the includes for them differ accordingly.
+   As this script does not support generating `x-checker-data` entries for me
+   and I was thoroughly disillusioned with getting the solvers to build by this
+   point, it's up to you to decide whether you want to add them manually.
+
+4. There's no version field because Flathub assumes the newest version listed in
    the `.appdata.xml` file is the version you're publishing. I don't know if it
-   filters out versions marked as development versions or if there's a way to
-   customize this behaviour.
+   automatically filters out versions marked as development versions to only be
+   displayed by tooling when you're asking for the development build channel,
+   but I wouldn't be surprised, given how it automatically splits out
+   localization data and debug symbols when it recognizes them and "magically do
+   the right thing by default" seems to be a running theme with Flatpak tooling.
 
 `x-checker-data` serves two purposes:
 

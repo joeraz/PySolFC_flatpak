@@ -78,6 +78,7 @@
         }
       ]
     },
+    "solvers.json",
     {
       "name": "PySolFC",
       "buildsystem": "simple",
