@@ -8,9 +8,6 @@ An almost-ready Flatpak packaging setup for
 1. Add the [Freecell Solver](https://fc-solve.shlomifish.org/) and
    [Black Hole Solitaire Solver](https://www.shlomifish.org/open-source/projects/black-hole-solitaire-solver/)
    to the build and test that they're being picked up correctly.
-2. Check
-   [CONTRIBUTING.md](https://github.com/shlomif/PySolFC/blob/master/CONTRIBUTING.md)
-   to see if there's anything else I need to do.
 
 ## Nice to Have
 
