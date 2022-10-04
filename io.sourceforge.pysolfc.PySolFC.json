@@ -23,6 +23,7 @@
   "rename-icon": "pysol",
   "rename-desktop-file": "pysol.desktop",
   "finish-args": [
+    "--share=ipc",
     "--socket=x11",
     "--socket=pulseaudio",
     "--device=dri",
