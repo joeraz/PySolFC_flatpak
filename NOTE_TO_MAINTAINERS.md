@@ -14,8 +14,10 @@ Regarding `io.sourceforge.pysolfc.PySolFC.json`:
    [flatpak-pip-generator](https://github.com/flatpak/flatpak-builder-tools/blob/master/pip/flatpak-pip-generator)
    script as
    `python3 flatpak-pip-generator --checker-data attrs configobj pillow pycotap 'pygame>=2' ttkthemes pysol-cards`
-3. `*.a` cannot be added to the `cleanup` list because `libmodplug.a` is needed
-   at runtime by PyGame for music playback to work.
+3. There's no version field because Flathub assumes the newest version listed in
+   the `.appdata.xml` file is the version you're publishing. I don't know if it
+   filters out versions marked as development versions or if there's a way to
+   customize this behaviour.
 
 `x-checker-data` serves two purposes:
 
