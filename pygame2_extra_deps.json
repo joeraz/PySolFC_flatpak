@@ -22,8 +22,8 @@
         {
           "type": "git",
           "url": "https://github.com/FluidSynth/fluidsynth",
-          "commit": "5d71b51585ce5dfe14a3cea9411bb83591786e28",
-          "tag": "v2.2.9",
+          "commit": "bfe3599b286f30d561e4df0b0785fa78d6652628",
+          "tag": "v2.3.0",
           "x-checker-data": {
             "type": "git",
             "tag-pattern": "^v([\\d.]+)$"
