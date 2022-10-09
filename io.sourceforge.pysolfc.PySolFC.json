@@ -94,17 +94,13 @@
         {
           "type": "git",
           "url": "https://github.com/shlomif/PySolFC",
-          "commit": "72ee1c6aafe227f01ad2f91222cccda77efbc35d",
-          "tag": "pysolfc-2.16.0",
+          "commit": "3879a9196b425b30b0d69caffb8988d11e6939b6",
+          "tag": "pysolfc-2.18.0",
           "x-checker-data": {
               "type": "git",
               "tag-pattern": "^pysolfc-([\\d.]+)$",
               "is-main-source": true
           }
-        },
-        {
-          "type": "patch",
-          "path": "0001-allow-app-paths.patch"
         },
         {
           "type": "file",

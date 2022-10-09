@@ -76,6 +76,18 @@
     <control>keyboard</control>
   </supports>
   <releases>
+    <release version="2.18.0" date="2022-09-09">
+      <description>
+        <ul>
+          <li>Advanced search feature - the ability to search for games, cardsets, or table tiles based on many different criteria.</li>
+          <li>Complete documentation containing rules for all 1,100+ games.</li>
+          <li>Revamped status bar, displaying more info.</li>
+          <li>The Find Card feature now supports all types of games.</li>
+          <li>Many new display and assist options.</li>
+          <li>Bugfixes, code cleanup, etc.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.16.0" date="2022-05-10">
       <description>
         <p>Anyone upgrading from a version prior to 2.15.0 should read the notes for that version before upgrading. New in this release:</p>
