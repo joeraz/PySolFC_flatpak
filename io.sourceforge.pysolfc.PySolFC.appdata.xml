@@ -76,7 +76,7 @@
     <control>keyboard</control>
   </supports>
   <releases>
-    <release version="2.18.0" date="2022-09-09">
+    <release version="2.18.0" date="2022-10-09">
       <description>
         <ul>
           <li>Advanced search feature - the ability to search for games, cardsets, or table tiles based on many different criteria.</li>
