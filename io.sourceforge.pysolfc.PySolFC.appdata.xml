@@ -58,7 +58,7 @@
   <url type="vcs-browser">https://github.com/shlomif/PySolFC</url>
   <url type="contribute">https://github.com/shlomif/PySolFC/blob/master/CONTRIBUTING.md</url>
   <provides>
-    <binary>pysol</binary>
+    <binary>pysol.py</binary>
     <python3>pysollib</python3>
     <python3>pysol_cards</python3>
   </provides>
